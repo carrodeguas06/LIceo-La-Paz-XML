@@ -1,0 +1,21 @@
+<!ELEMENT cine (peliculas, actores, directores)>
+<!ELEMENT peliculas (pelicula+)>
+<!ELEMENT pelicula (nombre_pelicula ,anho_publicacion, protagonista+, direccion+, oscar)>
+<!ELEMENT nombre_pelicula (#PCDATA)>
+<!ELEMENT anho_publicacion (#PCDATA)>
+<!ELEMENT protagonista (#PCDATA)>
+  <!ATTLIST protagonista id_actor IDREF #REQUIRED>
+<!ELEMENT direccion (#PCDATA)>
+  <!ATTLIST direccion id_director IDREF #REQUIRED>
+<!ELEMENT oscar EMPTY>
+  <!ATTLIST oscar cantidad CDATA #REQUIRED>
+<!ELEMENT actores (actor+)>
+<!ELEMENT actor (nombre_actor , anho_nacimiento_actor)>
+  <!ATTLIST actor id_actor ID #REQUIRED>
+<!ELEMENT nombre_actor (#PCDATA)>
+<!ELEMENT anho_nacimiento_actor (#PCDATA)>
+<!ELEMENT directores (director+)>
+<!ELEMENT director (nombre_director, anho_nacimiento_director)>
+  <!ATTLIST director id_director ID #REQUIRED>
+<!ELEMENT nombre_director (#PCDATA)>
+<!ELEMENT anho_nacimiento_director (#PCDATA)>

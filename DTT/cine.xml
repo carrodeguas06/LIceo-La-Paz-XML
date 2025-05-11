@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE cine SYSTEM "cine.dtd">
+
+<cine>
+  <peliculas>
+    <pelicula>
+      <nombre_pelicula>Cadena perpetua</nombre_pelicula>
+      <anho_publicacion>1994</anho_publicacion>
+      <protagonista id_actor="a1">Tim Robbins</protagonista>
+      <direccion id_director="d1">Frank Darabont</direccion>
+      <oscar cantidad="7"/>
+    </pelicula>
+
+    <pelicula>
+    <nombre_pelicula>Inception</nombre_pelicula>
+      <anho_publicacion>2010</anho_publicacion>
+      <protagonista id_actor="a2">Leonardo DiCaprio</protagonista>
+      <direccion id_director="d2">Christopher Nolan</direccion>
+      <oscar cantidad="4"/>
+    </pelicula>
+
+    <pelicula>
+    <nombre_pelicula>Matrix</nombre_pelicula>
+      <anho_publicacion>1999</anho_publicacion>
+      <protagonista id_actor="a3">Keanu Reeves</protagonista>
+      <direccion id_director="d3">Lana Wachowski</direccion>
+      <oscar cantidad="4"/>
+    </pelicula>
+  </peliculas>
+
+  <actores>
+    <actor id_actor="a1">
+      <nombre_actor>Tim Robbins</nombre_actor>
+      <anho_nacimiento_actor>1958</anho_nacimiento_actor>
+    </actor>
+
+    <actor id_actor="a2">
+      <nombre_actor>Leonardo DiCaprio</nombre_actor>
+      <anho_nacimiento_actor>1974</anho_nacimiento_actor>
+    </actor>
+
+    <actor id_actor="a3">
+      <nombre_actor>Keanu Reeves</nombre_actor>
+      <anho_nacimiento_actor>1964</anho_nacimiento_actor>
+    </actor>
+  </actores>
+
+  <directores>
+    <director id_director="d1">
+      <nombre_director>Frank Darabont</nombre_director>
+      <anho_nacimiento_director>1959</anho_nacimiento_director>
+    </director>
+
+    <director id_director="d2">
+      <nombre_director>Christopher Nolan</nombre_director>
+      <anho_nacimiento_director>1970</anho_nacimiento_director>
+    </director>
+
+    <director id_director="d3">
+      <nombre_director>Lana Wachowski</nombre_director>
+      <anho_nacimiento_director>1965</anho_nacimiento_director>
+    </director>
+  </directores>
+</cine>
