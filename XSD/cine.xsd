@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="cine">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="peliculas">
+            <xs:complexType>
+                <xs:sequence>
+                    <xs:element name="pelicula" minOccurs="1" maxOccurs="unbounded">
+                    <xs:complexType>
+                        <xs:sequence>
+                            <xs:element name="nombre_pelicula" type="xs:string"/>
+                            <xs:element name="anho_publicacion" type="xs:gYear"/>
+                           <xs:element name="protagonista">
+                            <xs:complexType>
+                              <xs:simpleContent>
+                                 <xs:extension base="xs:string">
+                                    <xs:attribute name="id_actor" type="xs:IDREF" use="required"/>
+                                  </xs:extension>
+                                </xs:simpleContent>
+                            </xs:complexType>
+                            </xs:element>
+                            <xs:element name="direccion">
+                              <xs:complexType>
+                                <xs:simpleContent>
+                                  <xs:extension base="xs:string">
+                                   <xs:attribute name="id_director" type="xs:IDREF" use="required"/>
+                                  </xs:extension>
+                                </xs:simpleContent>
+                              </xs:complexType>
+                            </xs:element>
+                            <xs:element name="oscar">
+                              <xs:complexType>
+                                <xs:attribute name="cantidad" type="xs:integer"/>
+                              </xs:complexType>
+                            </xs:element>
+                        </xs:sequence>
+                    </xs:complexType>
+                </xs:element>
+                </xs:sequence>    
+            </xs:complexType>
+        </xs:element>
+        <xs:element name="actores">
+          <xs:complexType>
+            <xs:sequence>
+             <xs:element name="actor" minOccurs="1" maxOccurs="unbounded">
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="nombre_actor" type="xs:string"/>
+                    <xs:element name="anho_nacimiento_actor" type="xs:gYear"/>
+                  </xs:sequence>
+                  <xs:attribute name="id_actor" type="xs:ID"/>
+                </xs:complexType>
+             </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="directores">
+          <xs:complexType>
+           <xs:sequence>
+            <xs:element name="director" minOccurs="1" maxOccurs="unbounded">
+             <xs:complexType>
+              <xs:sequence>
+                <xs:element name="nombre_director" type="xs:string"/>
+                <xs:element name="anho_nacimiento_director" type="xs:gYear"/>
+              </xs:sequence>
+              <xs:attribute name="id_director" type="xs:ID"/>
+             </xs:complexType> 
+            </xs:element>
+           </xs:sequence> 
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
